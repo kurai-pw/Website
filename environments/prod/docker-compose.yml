@@ -24,7 +24,7 @@ services:
       DB_NAME: $DB_NAME
       DB_DRIVER: $DB_DRIVER
     volumes:
-      - ./:/var/www/html:cached
+      - ./../../:/var/www/html:cached
 
   crond:
     image: wodby/drupal-php:$PHP_TAG
@@ -33,7 +33,7 @@ services:
       CRONTAB: "0 * * * * drush -r /var/www/html/web cron"
     command: sudo -E crond -f -d 0
     volumes:
-      - ./:/var/www/html:cached
+      - ./../../:/var/www/html:cached
 
   nginx:
     image: wodby/nginx:$NGINX_TAG
@@ -47,7 +47,7 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
     volumes:
-      - ./:/var/www/html:cached
+      - ./../../:/var/www/html:cached
     labels:
       - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)"
 
@@ -63,13 +63,8 @@ services:
     image: wodby/node:$NODE_TAG
     container_name: "${PROJECT_NAME}_node"
     working_dir: /var/www/html/web/themes/custom/bancho
-    labels:
-      - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
-      - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
-    expose:
-      - "3000"
     volumes:
-      - ./:/var/www/html
+      - ./../../:/var/www/html
     command: sh -c 'npm install && npm run watch'
 
   traefik:
