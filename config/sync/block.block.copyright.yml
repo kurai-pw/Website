@@ -1,0 +1,20 @@
+uuid: ede39666-f8ab-4cba-a786-b34812815155
+langcode: en
+status: true
+dependencies:
+  module:
+    - bancho_content
+  theme:
+    - bancho
+id: copyright
+theme: bancho
+region: footer
+weight: 0
+provider: null
+plugin: bancho_content_copyright
+settings:
+  id: bancho_content_copyright
+  label: Copyright
+  label_display: '0'
+  provider: bancho_content
+visibility: {  }

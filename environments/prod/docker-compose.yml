@@ -70,7 +70,7 @@ services:
       - "3000"
     volumes:
       - ./:/var/www/html
-    command: sh -c 'yarn install && yarn run build'
+    command: sh -c 'npm install && npm run watch'
 
   traefik:
     image: traefik:v2.0

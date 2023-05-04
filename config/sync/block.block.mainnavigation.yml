@@ -1,0 +1,25 @@
+uuid: b05a2459-bd61-490c-9ea9-09d9f20729a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bancho
+id: mainnavigation
+theme: bancho
+region: navbar_left
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

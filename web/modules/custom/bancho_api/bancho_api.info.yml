@@ -1,0 +1,5 @@
+name: Bancho API
+description: Provides a module to integrate with bancho.py API.
+package: Custom
+type: module
+core_version_requirement: ^10
