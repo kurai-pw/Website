@@ -15,14 +15,16 @@ services:
     image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
     environment:
-      SSMTP_MAILHUB: mailhog:1025
       PHP_SENDMAIL_PATH: '"/usr/bin/dos2unix -u | /usr/sbin/ssmtp -t -f"'
-      DB_HOST: $DB_HOST
-      DB_PORT: $DB_PORT
-      DB_USER: $DB_USER
-      DB_PASSWORD: $DB_PASSWORD
-      DB_NAME: $DB_NAME
-      DB_DRIVER: $DB_DRIVER
+      SSMTP_MAILHUB: mailhog:1025
+      PHP_FPM_USER: wodby
+      PHP_MAX_INPUT_TIME: 180
+      PHP_POST_MAX_SIZE: 128M
+      PHP_UPLOAD_MAX_FILESIZE: 128M
+      PHP_MAX_EXECUTION_TIME: 180
+      PHP_FPM_GROUP: wodby
+      DRUSH_OPTIONS_URI: $PROJECT_BASE_URL
+      PHP_FPM_CLEAR_ENV: 'false'
     volumes:
       - ./../../:/var/www/html:cached
 
