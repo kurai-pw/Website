@@ -1,2 +1,37 @@
+// Fonts.
+// -----------------------------------------------------------------------------
+@font-face {
+  font-family: 'Torus Light';
+  src: url('/themes/custom/bancho/build/fonts/toruspro-light.otf');
+}
+@font-face {
+  font-family: 'Torus Regular';
+  src: url('/themes/custom/bancho/build/fonts/toruspro-regular.otf');
+}
+@font-face {
+  font-family: 'Torus SemiBold';
+  src: url('/themes/custom/bancho/build/fonts/toruspro-semibold.otf');
+}
+
 // Global elements styling, e.g. for headings, buttons, links, etc.
 // -----------------------------------------------------------------------------
+
+@include media-breakpoint-up(lg) {
+  main.py-5 > .page__content > .container {
+    max-width: 1080px;
+  }
+}
+
+a {
+  transition: 150ms all ease-in-out;
+}
+
+.page {
+  color: white;
+  display: flex;
+  flex-flow: column;
+  background: var(--color-dark-gray);
+  main.py-5 {
+    flex: 1;
+  }
+}

@@ -9327,6 +9327,32 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/footer/footer.scss":
+/*!*******************************************!*\
+  !*** ./src/components/footer/footer.scss ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/components/header/header.scss":
+/*!*******************************************!*\
+  !*** ./src/components/header/header.scss ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/components/offcanvas/_offcanvas.scss":
 /*!**************************************************!*\
   !*** ./src/components/offcanvas/_offcanvas.scss ***!
@@ -9454,6 +9480,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		var installedChunks = {
 /******/ 			"/js/main.script": 0,
 /******/ 			"components/offcanvas/offcanvas": 0,
+/******/ 			"components/header/header": 0,
+/******/ 			"components/footer/footer": 0,
 /******/ 			"components/block/block": 0,
 /******/ 			"css/main.style": 0
 /******/ 		};
@@ -9507,10 +9535,12 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/js/main.script.js"); })
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/block/block.scss"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/header/header","components/footer/footer","components/block/block","css/main.style"], function() { return __webpack_require__("./src/js/main.script.js"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/header/header","components/footer/footer","components/block/block","css/main.style"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/header/header","components/footer/footer","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/block/block.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/header/header","components/footer/footer","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/footer/footer.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/header/header","components/footer/footer","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/header/header.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/header/header","components/footer/footer","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

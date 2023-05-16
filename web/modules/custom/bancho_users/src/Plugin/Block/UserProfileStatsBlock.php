@@ -1,0 +1,27 @@
+<?php
+
+namespace Drupal\bancho_users\Plugin\Block;
+
+use Drupal\Core\Block\BlockBase;
+
+/**
+ * Provides a user stats block with Ranked Score, etc.
+ *
+ * @Block(
+ *   id = "bancho_user_stats",
+ *   admin_label = @Translation("User Statistics"),
+ *   category = @Translation("Custom")
+ * )
+ */
+class UserProfileStatsBlock extends BlockBase {
+
+  /**
+   * {@inheritdoc}
+   */
+  public function build() {
+    return [
+
+    ];
+  }
+
+}

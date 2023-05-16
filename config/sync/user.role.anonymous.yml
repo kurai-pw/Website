@@ -2,12 +2,8 @@ uuid: 402d99ad-5f65-4070-a5ce-7b3b4d4a1395
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.restricted_html
   module:
     - comment
-    - contact
-    - filter
     - search
     - system
 _core:
@@ -19,6 +15,4 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'access site-wide contact form'
   - 'search content'
-  - 'use text format restricted_html'

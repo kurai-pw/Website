@@ -15,20 +15,31 @@ settings:
     items:
       - bold
       - italic
+      - underline
+      - strikethrough
+      - subscript
+      - superscript
       - '|'
+      - drupalInsertImage
       - link
       - '|'
       - bulletedList
       - numberedList
+      - horizontalLine
       - '|'
+      - alignment
       - blockQuote
-      - drupalInsertImage
       - '|'
       - heading
       - code
-      - '|'
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2
@@ -57,7 +68,7 @@ settings:
         - '<h5 id>'
         - '<h6 id>'
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''

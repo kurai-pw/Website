@@ -5,16 +5,18 @@ module:
   admin_toolbar_tools: 0
   automated_cron: 0
   bancho_content: 0
+  bancho_users: 0
   better_exposed_filters: 0
   big_pipe: 0
   block: 0
   block_content: 0
   breakpoint: 0
+  ckeditor: 0
   ckeditor5: 0
+  ckeditor_markdown: 0
   comment: 0
   components: 0
   config: 0
-  contact: 0
   contextual: 0
   datetime: 0
   dblog: 0
@@ -24,14 +26,17 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  fontawesome: 0
   gin_toolbar: 0
-  help: 0
   history: 0
   image: 0
   jquery_ui: 0
   jquery_ui_datepicker: 0
   jquery_ui_slider: 0
   jquery_ui_touch_punch: 0
+  layout_builder: 0
+  layout_custom_section_classes: 0
+  layout_discovery: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -46,8 +51,8 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
-  tour: 0
   update: 0
   user: 0
   views_remote_data: 0

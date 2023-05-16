@@ -1,0 +1,15 @@
+uuid: 174aa0ef-5430-4961-87b1-485f2c9728a9
+langcode: en
+status: true
+dependencies: {  }
+name: 256x256
+label: 256x256
+effects:
+  a037bf51-b30b-4c06-b406-8e68cf06d373:
+    uuid: a037bf51-b30b-4c06-b406-8e68cf06d373
+    id: image_scale
+    weight: 1
+    data:
+      width: 256
+      height: 256
+      upscale: true

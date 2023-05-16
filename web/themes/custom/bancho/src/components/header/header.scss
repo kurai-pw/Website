@@ -1,0 +1,41 @@
+.nav-link {
+  color: unset;
+}
+
+nav.navbar {
+  background-color: var(--color-purple) !important;
+  font-family: 'Torus Regular', serif;
+  ul.nav {
+    color: white;
+    li.nav-item {
+      //.nav-link {
+      //  color: white;
+      //}
+      &:hover {
+        a.nav-link {
+          color: white;
+        }
+      }
+    }
+    li.nav-item.active {
+      a.nav-link {
+        position: relative;
+        padding: 0;
+        margin: 8px;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          height: 3px;
+          width: 100%;
+          border-radius: 2px;
+          background: #ffffff9c;
+        }
+      }
+    }
+    &:hover {
+      color: rgba(255, 255, 255, .65) !important;
+    }
+  }
+}

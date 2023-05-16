@@ -1,0 +1,15 @@
+uuid: b1624373-9aac-4fa8-8015-042499f2590f
+langcode: en
+status: true
+dependencies: {  }
+name: w1280
+label: w1280
+effects:
+  625569a0-9c7a-443d-86f5-c33e67243910:
+    uuid: 625569a0-9c7a-443d-86f5-c33e67243910
+    id: image_scale
+    weight: 1
+    data:
+      width: 1280
+      height: null
+      upscale: true

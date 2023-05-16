@@ -1,0 +1,23 @@
+footer.page__footer {
+  background: var(--color-light-gray);
+  padding: 8px 0;
+  font-size: .92rem;
+  .container > div {
+    flex-direction: column;
+    ul.nav {
+      li.nav-item {
+        a.nav-link {
+          padding-top: 0;
+        }
+        &:hover {
+          a.nav-link {
+            color: var(--color-light-purple);
+          }
+        }
+      }
+    }
+    .block--copyright {
+      color: rgb(125 119 141);
+    }
+  }
+}

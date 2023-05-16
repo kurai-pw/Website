@@ -1,0 +1,38 @@
+uuid: 082845c3-17a2-4567-b9c5-0ec3e2d97fdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_profile_banner
+  module:
+    - image
+    - user
+id: user.user.field_profile_banner
+field_name: field_profile_banner
+entity_type: user
+bundle: user
+label: Banner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'banners/[current-user:uid]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: '8 MB'
+  max_resolution: 4096x1024
+  min_resolution: 1024x256
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

@@ -1,5 +1,13 @@
 @charset "UTF-8";
 :root {
+  --drupal-displace-offset-top: 0;
+  --color-purple: #5540BF;
+  --color-light-purple: #9985ff;
+  --color-dark-gray: #1F1F1F;
+  --color-light-gray: #2A2A2D;
+}
+
+:root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -10892,6 +10900,37 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
+@font-face {
+  font-family: "Torus Light";
+  src: url("/themes/custom/bancho/build/fonts/toruspro-light.otf");
+}
+@font-face {
+  font-family: "Torus Regular";
+  src: url("/themes/custom/bancho/build/fonts/toruspro-regular.otf");
+}
+@font-face {
+  font-family: "Torus SemiBold";
+  src: url("/themes/custom/bancho/build/fonts/toruspro-semibold.otf");
+}
+@media (min-width: 992px) {
+  main.py-5 > .page__content > .container {
+    max-width: 1080px;
+  }
+}
+a {
+  transition: 150ms all ease-in-out;
+}
+
+.page {
+  color: white;
+  display: flex;
+  flex-flow: column;
+  background: var(--color-dark-gray);
+}
+.page main.py-5 {
+  flex: 1;
+}
+
 #drupal-off-canvas,
 #drupal-off-canvas-wrapper,
 #drupal-off-canvas:not(.drupal-off-canvas-reset) {
@@ -11057,6 +11096,105 @@ textarea.form-control-lg {
 #drupal-off-canvas-wrapper .form-item.js-form-type-checkbox,
 #drupal-off-canvas:not(.drupal-off-canvas-reset) .form-item.js-form-type-checkbox {
   padding-left: 0;
+}
+
+.nav-link {
+  color: unset;
+}
+
+nav.navbar {
+  background-color: var(--color-purple) !important;
+  font-family: "Torus Regular", serif;
+}
+nav.navbar ul.nav {
+  color: white;
+}
+nav.navbar ul.nav li.nav-item:hover a.nav-link {
+  color: white;
+}
+nav.navbar ul.nav li.nav-item.active a.nav-link {
+  position: relative;
+  padding: 0;
+  margin: 8px;
+}
+nav.navbar ul.nav li.nav-item.active a.nav-link:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.6117647059);
+}
+nav.navbar ul.nav:hover {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+footer.page__footer {
+  background: var(--color-light-gray);
+  padding: 8px 0;
+  font-size: 0.92rem;
+}
+footer.page__footer .container > div {
+  flex-direction: column;
+}
+footer.page__footer .container > div ul.nav li.nav-item a.nav-link {
+  padding-top: 0;
+}
+footer.page__footer .container > div ul.nav li.nav-item:hover a.nav-link {
+  color: var(--color-light-purple);
+}
+footer.page__footer .container > div .block--copyright {
+  color: rgb(125, 119, 141);
+}
+
+.page__content > .container {
+  background: #2A2A2D;
+  padding: 16px;
+}
+
+article.user .user-header .field--name-field-profile-banner {
+  margin: -16px -16px 0 -16px;
+}
+article.user .user-info {
+  padding: 0 50px;
+  margin: 0 -16px 0 -16px;
+  background: var(--color-dark-gray);
+  height: 80px;
+  position: relative;
+}
+article.user .user-info .layout__region--first {
+  flex: 0 1 192px;
+  position: relative;
+}
+article.user .user-info .layout__region--first .block {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+article.user .user-info .layout__region--first .field--name-user-picture img {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: 12px;
+  border-radius: 24px;
+}
+article.user .user-info .layout__region--second {
+  padding: 12px 0;
+}
+article.user .user-info .layout__region--second .field--name-name {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+article.user .user-about-me {
+  background: var(--color-dark-gray);
+  border-radius: 24px;
+  padding: 12px;
+  margin: 24px 0;
 }
 
 /*# sourceMappingURL=main.style.css.map*/

@@ -1,0 +1,50 @@
+article.user {
+  .user-header {
+    // Profile Banner.
+    .field--name-field-profile-banner {
+      margin: -16px -16px 0 -16px;
+    }
+  }
+
+  .user-info {
+    padding: 0 50px;
+    margin: 0 -16px 0 -16px;
+    background: var(--color-dark-gray);
+    height: 80px;
+    position: relative;
+    // Avatar region.
+    .layout__region--first {
+      flex: 0 1 192px;
+      position: relative;
+      .block {
+        height: 100%;
+        width: fit-content;
+      }
+      // Avatar.
+      .field--name-user-picture {
+        img {
+          position: absolute;
+          width: 160px;
+          height: 160px;
+          bottom: 12px;
+          border-radius: 24px;
+        }
+      }
+    }
+    .layout__region--second {
+      padding: 12px 0;
+      // Username.
+      .field--name-name {
+        width: fit-content;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .user-about-me {
+    background: var(--color-dark-gray);
+    border-radius: 24px;
+    padding: 12px;
+    margin: 24px 0;
+  }
+}

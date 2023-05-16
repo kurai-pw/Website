@@ -3,11 +3,249 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_about_me
+    - field.field.user.user.field_interests
+    - field.field.user.user.field_location
+    - field.field.user.user.field_occupation
+    - field.field.user.user.field_profile_background
+    - field.field.user.user.field_profile_banner
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.256x256
   module:
+    - bancho_users
     - image
+    - layout_builder
+    - layout_discovery
+    - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          context_mapping: {  }
+          custom_id: ''
+          custom_classes: user-header
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          563da7e4-b01a-4efc-b2c9-a05cbe347af0:
+            uuid: 563da7e4-b01a-4efc-b2c9-a05cbe347af0
+            region: content
+            configuration:
+              id: bancho_user_header
+              label: 'User Header'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          5a7f437d-6145-437a-9b52-66320c27cb7b:
+            uuid: 5a7f437d-6145-437a-9b52-66320c27cb7b
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_profile_banner'
+              label: Banner
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: w1280
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: User
+          context_mapping: {  }
+          column_widths: 50-50
+          custom_id: ''
+          custom_classes: user-info
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            first:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+            second:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          7851407b-c580-4203-8595-4996b61bbefe:
+            uuid: 7851407b-c580-4203-8595-4996b61bbefe
+            region: first
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label: Avatar
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: 256x256
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7af4b241-3f08-4ab0-964e-641b54735e5b:
+            uuid: 7af4b241-3f08-4ab0-964e-641b54735e5b
+            region: second
+            configuration:
+              id: 'field_block:user:user:name'
+              label: Name
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Additional info'
+          context_mapping: {  }
+          custom_id: ''
+          custom_classes: user-additional-info
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          a699687d-af8b-468f-b94e-f0bcad87a693:
+            uuid: a699687d-af8b-468f-b94e-f0bcad87a693
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_interests'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          e798dd70-e71d-462d-aa78-5697d9efb5eb:
+            uuid: e798dd70-e71d-462d-aa78-5697d9efb5eb
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_occupation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          32ddb42c-9489-428f-a77c-961a598419b2:
+            uuid: 32ddb42c-9489-428f-a77c-961a598419b2
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_location'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'About me'
+          context_mapping: {  }
+          custom_id: ''
+          custom_classes: user-about-me
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            content:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          9f408c4b-9432-4966-8958-f5c51a1403e7:
+            uuid: 9f408c4b-9432-4966-8958-f5c51a1403e7
+            region: content
+            configuration:
+              id: 'field_block:user:user:field_about_me'
+              label: me!
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
 id: user.user.default
@@ -15,15 +253,70 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_about_me:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_interests:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_location:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_occupation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_profile_background:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_profile_banner:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
   member_for:
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
     region: content
   user_picture:
     type: image
     label: hidden
     settings:
-      image_style: thumbnail
-      image_link: content
+      image_link: ''
+      image_style: 256x256
       image_loading:
         attribute: lazy
     third_party_settings: {  }

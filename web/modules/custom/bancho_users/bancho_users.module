@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ *
+ * Contains hooks for bancho_users module.
+ */
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function bancho_users_theme() {
+  return [
+    'bancho__user_header' => [
+      'variables' => NULL,
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess().
+ */
+function bancho_users_preprocess(&$variables, $hook) {
+  $variables['#attached']['library'][] =  'bancho_users/profile-background';
+  if ($user = \Drupal::routeMatch()->getParameter('user')) {
+    if ($user instanceof UserInterface) {
+      $variables['#attached']['drupalSettings']['bancho_users']['background'] =
+        ImageStyle::load('w1920')->buildUrl(
+          $user->get('field_profile_background')->entity->getFileUri()
+        );
+    }
+  }
+}
