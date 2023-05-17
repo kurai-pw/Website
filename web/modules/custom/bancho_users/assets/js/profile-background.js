@@ -8,7 +8,7 @@
  */
 (function ($, Drupal, drupalSettings) {
   /**
-   * Attaches the batch behavior to progress bars.
+   * Attaches the behavior to set the profile background.
    *
    * @type {Drupal~behavior}
    */

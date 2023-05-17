@@ -25,6 +25,7 @@ services:
       PHP_FPM_GROUP: wodby
       DRUSH_OPTIONS_URI: $PROJECT_BASE_URL
       PHP_FPM_CLEAR_ENV: 'false'
+      PRODUCTION: 'true'
     volumes:
       - ./../../:/var/www/html:cached
 

@@ -6,6 +6,8 @@
     "/components/footer/footer.css": "/components/footer/footer.css",
     "/components/block/block.css": "/components/block/block.css",
     "/css/main.style.css": "/css/main.style.css",
+    "/components/page/user.css": "/components/page/user.css",
+    "/components/page/page.css": "/components/page/page.css",
     "/fonts/toruspro-light.otf": "/fonts/toruspro-light.otf",
     "/fonts/toruspro-regular.otf": "/fonts/toruspro-regular.otf",
     "/fonts/toruspro-semibold.otf": "/fonts/toruspro-semibold.otf"

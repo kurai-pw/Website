@@ -1,0 +1,116 @@
+article.user .user-header .field--name-field-profile-banner {
+  margin: -16px -16px 0 -16px;
+}
+article.user .user-info {
+  padding: 0 50px;
+  margin: 0 -16px 0 -16px;
+  background: var(--color-dark-gray);
+  height: 80px;
+  position: relative;
+}
+article.user .user-info .layout__region--first {
+  flex: 0 1 192px;
+  position: relative;
+}
+article.user .user-info .layout__region--first .block {
+  height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+article.user .user-info .layout__region--first .field--name-user-picture img {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: 12px;
+  border-radius: 24px;
+}
+article.user .user-info .layout__region--second {
+  padding: 12px 0;
+}
+article.user .user-info .layout__region--second .field--name-name {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+article.user .user-info .layout__region--second .user-status {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+article.user .user-ranking-section {
+  margin: 8px 0;
+}
+article.user .user-ranking-section .layout__region--first {
+  display: flex;
+  flex-wrap: wrap;
+}
+article.user .user-ranking-section .layout__region--first .block:first-child, article.user .user-ranking-section .layout__region--first .block:nth-child(2) {
+  flex-basis: 100%;
+}
+article.user .user-ranking-section .layout__region--first .block:nth-child(3), article.user .user-ranking-section .layout__region--first .block:nth-child(4) {
+  flex-basis: 50%;
+}
+article.user .user-ranking-section .layout__region--first .user--ranking .user-rank, article.user .user-ranking-section .layout__region--first .user--ranking .user-riuc-item, article.user .user-ranking-section .layout__region--first .user-riuc .user-rank, article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item {
+  display: inline-block;
+}
+article.user .user-ranking-section .layout__region--first .user--ranking .user-rank:first-child, article.user .user-ranking-section .layout__region--first .user--ranking .user-riuc-item:first-child, article.user .user-ranking-section .layout__region--first .user-riuc .user-rank:first-child, article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item:first-child {
+  margin: 0 0 8px 0;
+}
+article.user .user-ranking-section .layout__region--first .user--ranking .user-rank:nth-child(2), article.user .user-ranking-section .layout__region--first .user--ranking .user-riuc-item:nth-child(2), article.user .user-ranking-section .layout__region--first .user-riuc .user-rank:nth-child(2), article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item:nth-child(2) {
+  margin: 0 0 8px 16px;
+}
+article.user .user-ranking-section .layout__region--first .user--ranking .user-rank .user-rank-row, article.user .user-ranking-section .layout__region--first .user--ranking .user-rank .user-row, article.user .user-ranking-section .layout__region--first .user--ranking .user-riuc-item .user-rank-row, article.user .user-ranking-section .layout__region--first .user--ranking .user-riuc-item .user-row, article.user .user-ranking-section .layout__region--first .user-riuc .user-rank .user-rank-row, article.user .user-ranking-section .layout__region--first .user-riuc .user-rank .user-row, article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item .user-rank-row, article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item .user-row {
+  font-size: 0.8rem;
+  font-family: "Hind Light", serif;
+}
+article.user .user-ranking-section .layout__region--first .user--ranking .user-rank .user-rank-row:nth-child(2), article.user .user-ranking-section .layout__region--first .user--ranking .user-riuc-item .user-rank-row:nth-child(2), article.user .user-ranking-section .layout__region--first .user-riuc .user-rank .user-rank-row:nth-child(2), article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item .user-rank-row:nth-child(2) {
+  margin-top: 6px;
+  font-size: 1.1rem;
+  font-family: "Hind SemiBold", serif;
+}
+article.user .user-ranking-section .layout__region--first .user-riuc .user-riuc-item {
+  min-width: 92px;
+}
+article.user .user-ranking-section .layout__region--first .user-ranking-chart, article.user .user-ranking-section .layout__region--first .user-ranks-count {
+  text-align: center;
+  padding: 32px 0;
+  font-family: "Hind SemiBold", serif;
+  font-size: 1.2rem;
+}
+article.user .user-ranking-section .layout__region--first .user-ranks-count {
+  padding: 8px 0;
+}
+article.user .user-ranking-section .layout__region--second {
+  border-left: 3px solid rgba(30, 30, 30, 0.5);
+}
+article.user .user-ranking-section .layout__region--second .user-stats {
+  padding: 32px 16px;
+  font-size: 0.9rem;
+  font-family: "Hind Light", serif;
+}
+article.user .user-ranking-section .layout__region--second .user-stats ol {
+  padding: 0;
+  list-style-type: none;
+}
+article.user .user-ranking-section .layout__region--second .user-stats ol li {
+  display: flex;
+  justify-content: space-between;
+}
+article.user .user-ranking-section .layout__region--second .user-stats ol li .user-stat {
+  flex-basis: 63%;
+}
+article.user .user-ranking-section .layout__region--second .user-stats ol li .user-stat-value {
+  flex-basis: 32%;
+}
+article.user .user-about-me {
+  background: var(--color-dark-gray);
+  border-radius: 24px;
+  padding: 12px;
+  margin: 24px 0;
+}
+
+/*# sourceMappingURL=user.css.map*/

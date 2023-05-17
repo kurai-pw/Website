@@ -3,6 +3,7 @@
 namespace Drupal\bancho_users\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides a user stats block with Ranked Score, etc.
@@ -20,8 +21,15 @@ class UserProfileStatsBlock extends BlockBase {
    */
   public function build() {
     return [
-
+      '#theme' => 'bancho__user_stats',
     ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
+    return Cache::PERMANENT;
   }
 
 }

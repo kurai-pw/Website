@@ -833,6 +833,10 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
+if (file_exists($app_root . '/' . $site_path . '/settings.prod.php') && getenv('PRODUCTION')) {
+  include $app_root . '/' . $site_path . '/settings.prod.php';
+}
+
 $databases['default']['default'] = array (
   'database' => 'drupal',
   'username' => 'drupal',

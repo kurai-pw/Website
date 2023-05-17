@@ -6,22 +6,22 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
 
 /**
- * Provides a user ranking chart block.
+ * Provides a block with a user ranks count (SS, A, etc. ranks).
  *
  * @Block(
- *   id = "bancho_user_ranking_chart",
- *   admin_label = @Translation("User Ranking Chart"),
+ *   id = "bancho_user_ranks_count",
+ *   admin_label = @Translation("User Ranks Count"),
  *   category = @Translation("Custom")
  * )
  */
-class UserProfileRankingChartBlock extends BlockBase {
+class UserProfileRanksCountBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
     return [
-      '#theme' => 'bancho__user_ranking_chart',
+      '#theme' => 'bancho__user_ranks_count',
     ];
   }
 

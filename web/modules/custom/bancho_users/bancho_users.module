@@ -14,8 +14,35 @@ use Drupal\user\UserInterface;
  */
 function bancho_users_theme() {
   return [
+    'bancho__user_header_global' => [
+      'variables' => [],
+    ],
     'bancho__user_header' => [
-      'variables' => NULL,
+      'variables' => [],
+    ],
+    'bancho__user_info' => [
+      'variables' => [],
+    ],
+    'bancho__user_ranking' => [
+      'variables' => [],
+    ],
+    'bancho__user_ranking_chart' => [
+      'variables' => [],
+    ],
+    'bancho__user_ranking_info_under_chart' => [
+      'variables' => [],
+    ],
+    'bancho__user_ranks_count' => [
+      'variables' => [],
+    ],
+    'bancho__user_stats' => [
+      'variables' => [],
+    ],
+    'bancho__user_country' => [
+      'variables' => [],
+    ],
+    'bancho__user_status' => [
+      'variables' => [],
     ],
   ];
 }
@@ -24,13 +51,25 @@ function bancho_users_theme() {
  * Implements hook_preprocess().
  */
 function bancho_users_preprocess(&$variables, $hook) {
-  $variables['#attached']['library'][] =  'bancho_users/profile-background';
   if ($user = \Drupal::routeMatch()->getParameter('user')) {
     if ($user instanceof UserInterface) {
-      $variables['#attached']['drupalSettings']['bancho_users']['background'] =
-        ImageStyle::load('w1920')->buildUrl(
-          $user->get('field_profile_background')->entity->getFileUri()
-        );
+      $drupal_settings = &$variables['#attached']['drupalSettings']['bancho_users'];
+      // @TODO HARDCODED MODE!!!!!!!!!
+      $drupal_settings['mode'] = 0;
+
+      // Add profile background if exists.
+      if (!($background = $user->get('field_profile_background'))->isEmpty()) {
+        $variables['#attached']['library'][] =  'bancho_users/profile-background';
+        $drupal_settings['background'] =
+          ImageStyle::load('w1920')->buildUrl(
+            $background->entity->getFileUri()
+          );
+      }
+      // Load user info using API.
+      $variables['#attached']['library'][] =  'bancho_users/user-info';
+      // @TODO Rework when will be available through localhost.
+      // $drupal_settings['data'] =
+      // \Drupal::service('bancho_api')->getPlayerInfo($user->id());
     }
   }
 }

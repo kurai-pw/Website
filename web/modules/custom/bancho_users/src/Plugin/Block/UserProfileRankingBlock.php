@@ -3,6 +3,7 @@
 namespace Drupal\bancho_users\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides a block with global and country rank.
@@ -20,8 +21,15 @@ class UserProfileRankingBlock extends BlockBase {
    */
   public function build() {
     return [
-
+      '#theme' => 'bancho__user_ranking',
     ];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge() {
+    return Cache::PERMANENT;
   }
 
 }

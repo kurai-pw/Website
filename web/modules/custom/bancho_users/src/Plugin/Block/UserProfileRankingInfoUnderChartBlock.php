@@ -6,22 +6,22 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
 
 /**
- * Provides a user ranking chart block.
+ * Provides a block with user pp and total play time.
  *
  * @Block(
- *   id = "bancho_user_ranking_chart",
- *   admin_label = @Translation("User Ranking Chart"),
+ *   id = "bancho_user_ranking_info_under_chart",
+ *   admin_label = @Translation("User Ranking Under Chart"),
  *   category = @Translation("Custom")
  * )
  */
-class UserProfileRankingChartBlock extends BlockBase {
+class UserProfileRankingInfoUnderChartBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
     return [
-      '#theme' => 'bancho__user_ranking_chart',
+      '#theme' => 'bancho__user_ranking_info_under_chart',
     ];
   }
 

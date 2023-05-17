@@ -6,22 +6,22 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
 
 /**
- * Provides a user ranking chart block.
+ * Provides a block with current user status.
  *
  * @Block(
- *   id = "bancho_user_ranking_chart",
- *   admin_label = @Translation("User Ranking Chart"),
+ *   id = "bancho_user_status",
+ *   admin_label = @Translation("User Status"),
  *   category = @Translation("Custom")
  * )
  */
-class UserProfileRankingChartBlock extends BlockBase {
+class UserProfileStatus extends BlockBase {
 
   /**
    * {@inheritdoc}
    */
   public function build() {
     return [
-      '#theme' => 'bancho__user_ranking_chart',
+      '#theme' => 'bancho__user_status',
     ];
   }
 

@@ -38,6 +38,85 @@ article.user {
         width: fit-content;
         font-size: 1.5rem;
       }
+      .user-status {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .user-ranking-section {
+    margin: 8px 0;
+    .layout__region--first {
+      display: flex;
+      flex-wrap: wrap;
+      // Layout grid.
+      .block {
+        &:first-child, &:nth-child(2) {
+          flex-basis: 100%;
+        }
+        &:nth-child(3), &:nth-child(4) {
+          flex-basis: 50%;
+        }
+      }
+      .user--ranking, .user-riuc {
+        .user-rank, .user-riuc-item {
+          display: inline-block;
+          &:first-child{
+            margin: 0 0 8px 0;
+          }
+          &:nth-child(2) {
+            margin: 0 0 8px 16px;
+          }
+          .user-rank-row, .user-row {
+            font-size: .8rem;
+            font-family: "Hind Light", serif;
+          }
+          .user-rank-row:nth-child(2) {
+            margin-top: 6px;
+            font-size: 1.1rem;
+            font-family: "Hind SemiBold", serif;
+          }
+        }
+      }
+      .user-riuc {
+        .user-riuc-item {
+          min-width: 92px;
+        }
+      }
+      .user-ranking-chart, .user-ranks-count {
+        text-align: center;
+        padding: 32px 0;
+        font-family: 'Hind SemiBold', serif;
+        font-size: 1.2rem;
+      }
+      .user-ranks-count {
+        padding: 8px 0;
+      }
+    }
+    .layout__region--second {
+      border-left: 3px solid rgba(30, 30, 30, .5);
+      .user-stats {
+        padding: 32px 16px;
+        font-size: .9rem;
+        font-family: "Hind Light", serif;
+        ol {
+          padding: 0;
+          list-style-type: none;
+          li {
+            display: flex;
+            justify-content: space-between;
+            .user-stat {
+              flex-basis: 63%;
+            }
+            .user-stat-value {
+              flex-basis: 32%;
+            }
+          }
+        }
+      }
     }
   }
 

@@ -1,0 +1,4 @@
+services:
+  bancho_api:
+    class: Drupal\bancho_api\BanchoAPI
+    arguments: ['@http_client']

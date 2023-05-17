@@ -141,6 +141,98 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          2f890c58-cd25-47ab-aabb-bef12b96c436:
+            uuid: 2f890c58-cd25-47ab-aabb-bef12b96c436
+            region: second
+            configuration:
+              id: bancho_user_status
+              label: 'User Status'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'User Ranking'
+          context_mapping: {  }
+          column_widths: 67-33
+          custom_id: ''
+          custom_classes: user-ranking-section
+          custom_class_choose: {  }
+          custom_styles: ''
+          custom_data_attributes: ''
+          regions:
+            first:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+            second:
+              region_id: ''
+              region_class_choose: {  }
+              region_classes: ''
+              region_styles: ''
+              region_data: ''
+        components:
+          7ce121a0-0ff2-4e25-9ede-6599fc7919a9:
+            uuid: 7ce121a0-0ff2-4e25-9ede-6599fc7919a9
+            region: first
+            configuration:
+              id: bancho_user_ranking
+              label: 'User Ranking'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          c010acd5-80c6-46b9-9422-b65af8641bdd:
+            uuid: c010acd5-80c6-46b9-9422-b65af8641bdd
+            region: first
+            configuration:
+              id: bancho_user_ranking_chart
+              label: 'User Ranking Chart'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 1
+            additional: {  }
+          584f9b35-2d0b-4d5c-b602-ce84983e2679:
+            uuid: 584f9b35-2d0b-4d5c-b602-ce84983e2679
+            region: first
+            configuration:
+              id: bancho_user_ranking_info_under_chart
+              label: 'User Ranking Under Chart'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 2
+            additional: {  }
+          0e74605b-87b4-468c-87fc-772135850307:
+            uuid: 0e74605b-87b4-468c-87fc-772135850307
+            region: second
+            configuration:
+              id: bancho_user_stats
+              label: 'User Statistics'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          3ffdbea1-7091-47b3-bdbb-963d5a470079:
+            uuid: 3ffdbea1-7091-47b3-bdbb-963d5a470079
+            region: first
+            configuration:
+              id: bancho_user_ranks_count
+              label: 'User Ranks Count'
+              label_display: '0'
+              provider: bancho_users
+              context_mapping: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: layout_onecol
@@ -165,12 +257,15 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:user:user:field_interests'
+              label: Interests
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: string
-                label: above
+                label: hidden
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
@@ -181,12 +276,15 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:user:user:field_occupation'
+              label: Occupation
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: string
-                label: above
+                label: hidden
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
@@ -197,12 +295,15 @@ third_party_settings:
             region: content
             configuration:
               id: 'field_block:user:user:field_location'
+              label: Location
               label_display: '0'
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
                 type: string
-                label: above
+                label: hidden
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
