@@ -14,6 +14,7 @@ services:
   php:
     image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
+    user: root
     environment:
       PHP_SENDMAIL_PATH: '"/usr/bin/dos2unix -u | /usr/sbin/ssmtp -t -f"'
       SSMTP_MAILHUB: mailhog:1025
@@ -66,9 +67,10 @@ services:
     image: wodby/node:$NODE_TAG
     container_name: "${PROJECT_NAME}_node"
     working_dir: /var/www/html/web/themes/custom/bancho
+    user: root
     volumes:
       - ./../../:/var/www/html
-    command: sh -c 'npm install && npm run watch'
+    command: sh -c 'npm install && npm run production'
 
   traefik:
     image: traefik:v2.0

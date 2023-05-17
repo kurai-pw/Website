@@ -1,1 +1,0 @@
-{"version":3,"file":"components/page/page.css","mappings":"AAAA;EACE;EACA;AACF,C","sources":["webpack://radix_subtheme/./src/components/page/page.scss"],"sourcesContent":[".page__content > .container {\n  background: #2A2A2D;\n  padding: 16px;\n}\n"],"names":[],"sourceRoot":""}

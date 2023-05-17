@@ -34,5 +34,9 @@ drush-backups
 # Ignore docker compose overrides
 /**/docker-compose.override.yml
 
+# Ignore theme files.
+/web/themes/custom/bancho/**.css
+/web/themes/custom/**/build/
+
 # Ignore sql files
 *.sql
