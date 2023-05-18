@@ -17,7 +17,8 @@
       $(once('profileBackground', 'body', context)).each(function () {
         if (drupalSettings?.bancho_users?.background) {
           $('main.py-5').css({
-            'background': `url(${drupalSettings.bancho_users.background}) no-repeat fixed`,
+            'background': `url(${drupalSettings.bancho_users.background}) no-repeat center center fixed`,
+            'background-size': 'cover',
           });
         }
       });

@@ -12,9 +12,9 @@
    *
    * @type {Drupal~behavior}
    */
-  Drupal.behaviors.profileBackground = {
+  Drupal.behaviors.userInfo = {
     attach(context, settings) {
-      $(once('profileBackground', 'body', context)).each(function () {
+      $(once('userInfo', 'body', context)).each(function () {
         // @TODO Rework when will be available through localhost.
         // const info = drupalSettings.bancho_users.data.player.info;
         // const stats = drupalSettings.bancho_users.data.player.stats[drupalSettings.bancho_users.mode];
@@ -25,12 +25,10 @@
         let uid = window.location.pathname.split("/user/").pop();
         uid = uid === '1' ? '3' : uid;
         $.ajax({
+          // @TODO HARDCODED DOMAIN!!!!!!!
           url: 'https://api.kurai.pw/v1/get_player_info',
           method: 'GET',
           dataType: 'json',
-          // cors: true,
-          // contentType:'application/json',
-          // secure: true,
           data: {
             'id': uid,
             'scope': 'all',

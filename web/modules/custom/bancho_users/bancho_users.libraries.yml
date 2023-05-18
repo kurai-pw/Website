@@ -1,7 +1,26 @@
 profile-background:
   js:
     assets/js/profile-background.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/jquery.once
+    - core/drupalSettings
+
+user-info:
+  js:
     assets/js/user-info.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/jquery.once
+    - core/drupalSettings
+
+user-status:
+  js:
+    assets/js/user-status.js: { minified: true }
   dependencies:
     - core/drupal
     - core/jquery

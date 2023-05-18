@@ -1,46 +1,34 @@
-// Fonts.
-// -----------------------------------------------------------------------------
-@font-face {
-  font-family: 'Torus Light';
-  src: url('/themes/custom/bancho/build/fonts/toruspro-light.otf');
-}
-@font-face {
-  font-family: 'Torus Regular';
-  src: url('/themes/custom/bancho/build/fonts/toruspro-regular.otf');
-}
-@font-face {
-  font-family: 'Torus SemiBold';
-  src: url('/themes/custom/bancho/build/fonts/toruspro-semibold.otf');
-}
-
-@font-face {
-  font-family: 'Hind Light';
-  src: url('/themes/custom/bancho/build/fonts/Hind-Light.ttf');
-}
-@font-face {
-  font-family: 'Hind Regular';
-  src: url('/themes/custom/bancho/build/fonts/Hind-Regular.ttf');
-}
-@font-face {
-  font-family: 'Hind Medium';
-  src: url('/themes/custom/bancho/build/fonts/Hind-Medium.ttf');
-}
-@font-face {
-  font-family: 'Hind SemiBold';
-  src: url('/themes/custom/bancho/build/fonts/Hind-SemiBold.ttf');
-}
-@font-face {
-  font-family: 'Hind Bold';
-  src: url('/themes/custom/bancho/build/fonts/Hind-Bold.ttf');
-}
-
-
 // Global elements styling, e.g. for headings, buttons, links, etc.
 // -----------------------------------------------------------------------------
 
+// Layout.
+html {
+  height: 100%;
+  body {
+    min-height: 100%;
+    .dialog-off-canvas-main-canvas {
+      width: 100%;
+      min-height: 100%;
+      position: absolute;
+      .page {
+        min-height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
 @include media-breakpoint-up(lg) {
-  main.py-5 > .page__content > .container {
-    max-width: 1080px;
+  main.py-5 {
+    > .page__content > .container,
+    > .page__header {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    > .page__header > .container {
+      padding: 0;
+    }
   }
 }
 

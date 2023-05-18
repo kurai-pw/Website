@@ -1,0 +1,20 @@
+uuid: b6c849a0-6262-46c0-8b6b-172cbe06661c
+langcode: en
+status: true
+dependencies:
+  module:
+    - bancho_content
+  theme:
+    - bancho
+id: development_alert
+theme: bancho
+region: header
+weight: 0
+provider: null
+plugin: bancho_content_development_alert
+settings:
+  id: bancho_content_development_alert
+  label: 'Development Alert'
+  label_display: '0'
+  provider: bancho_content
+visibility: {  }

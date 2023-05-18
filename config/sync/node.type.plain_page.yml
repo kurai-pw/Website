@@ -1,0 +1,17 @@
+uuid: c4c4ae56-07fa-4c10-a811-852f2ddefc0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Plain page'
+type: plain_page
+description: 'Pages without any fields. Content will be added or changed only by editing the .twig template. Used for pages like 404, 403, and home.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

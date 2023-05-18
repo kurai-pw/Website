@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/admin_toolbar": "*",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/ckeditor_markdown": "^1.3",
@@ -23,13 +24,17 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/default_content": "^2.0@alpha",
         "drupal/fontawesome": "^2.25",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
         "drupal/layout_custom_section_classes": "^1.0",
+        "drupal/queue_ui": "^3.1",
         "drupal/radix": "^5.0",
         "drupal/token": "^1.11",
-        "drupal/views_remote_data": "^1.0"
+        "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/views_remote_data": "^1.0",
+        "drupal/xmlsitemap": "^1.4"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -42,7 +47,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
@@ -50,6 +56,11 @@
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
+            }
+        },
+        "patches": {
+            "drupal/xmlsitemap": {
+                "3323148 - Error: Call to undefined method Drupal\\Core\\Extension\\ModuleHandler::getImplementations() in xmlsitemap_check_status()": "https://www.drupal.org/files/issues/2023-01-16/3323148.patch"
             }
         },
         "installer-paths": {

@@ -851,3 +851,5 @@ $databases['default']['default'] = array (
 
 $settings['config_sync_directory'] = '../config/sync';
 
+$config['image.settings']['suppress_itok_output'] = TRUE;
+

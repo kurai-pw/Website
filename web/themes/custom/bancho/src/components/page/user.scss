@@ -3,6 +3,14 @@ article.user {
     // Profile Banner.
     .field--name-field-profile-banner {
       margin: -16px -16px 0 -16px;
+      overflow: hidden;
+      height: 270px;
+      position: relative;
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 

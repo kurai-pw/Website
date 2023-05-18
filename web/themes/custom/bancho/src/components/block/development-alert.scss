@@ -1,0 +1,31 @@
+.alert.dev-alert {
+  display: flex;
+  background-color: rgba(135,0,0,.4);
+  border-radius: 100px;
+  .icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 23px 0 4px;
+    svg {
+      font-size: 18px;
+      line-height: 0;
+    }
+    .text {
+      margin-left: 16px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 3px;
+      top: 0;
+      right: 0;
+      border-radius: 2px;
+      background: #ee3f3f;
+    }
+  }
+  .message {
+    padding: 0 0 0 18px;
+  }
+}

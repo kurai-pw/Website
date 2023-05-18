@@ -1,0 +1,15 @@
+uuid: a16671de-d081-46df-936a-e73e25e705f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plain_page
+  module:
+    - user
+id: node.plain_page.default
+targetEntityType: node
+bundle: plain_page
+mode: default
+content: {  }
+hidden:
+  links: true

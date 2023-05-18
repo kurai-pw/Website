@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ *
+ * Contains hooks for bancho_content module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bancho_content_theme() {
+  return [
+    'bancho__content_development_alert' => [
+      'variables' => [],
+    ],
+  ];
+}
+

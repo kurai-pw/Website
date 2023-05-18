@@ -1,0 +1,20 @@
+uuid: 24c58d02-27c4-484e-b59d-54a4546eb558
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.plain_page
+  module:
+    - user
+id: node.plain_page.teaser
+targetEntityType: node
+bundle: plain_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,33 @@
+uuid: e60cd3fd-2474-4e4b-8196-755a97c4b2d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.plain_page
+  module:
+    - path
+id: node.plain_page.default
+targetEntityType: node
+bundle: plain_page
+mode: default
+content:
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

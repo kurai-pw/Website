@@ -50,7 +50,7 @@ function bancho_users_theme() {
 /**
  * Implements hook_preprocess().
  */
-function bancho_users_preprocess(&$variables, $hook) {
+function bancho_users_preprocess_user(&$variables, $hook) {
   if ($user = \Drupal::routeMatch()->getParameter('user')) {
     if ($user instanceof UserInterface) {
       $drupal_settings = &$variables['#attached']['drupalSettings']['bancho_users'];
@@ -65,8 +65,12 @@ function bancho_users_preprocess(&$variables, $hook) {
             $background->entity->getFileUri()
           );
       }
-      // Load user info using API.
+
+      // Load user info.
       $variables['#attached']['library'][] =  'bancho_users/user-info';
+      // Load user status.
+      $variables['#attached']['library'][] =  'bancho_users/user-status';
+
       // @TODO Rework when will be available through localhost.
       // $drupal_settings['data'] =
       // \Drupal::service('bancho_api')->getPlayerInfo($user->id());

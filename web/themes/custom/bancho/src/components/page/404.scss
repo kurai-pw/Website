@@ -1,0 +1,35 @@
+.page-not-found,
+.access-denied-page {
+  position: relative;
+  .title {
+    font-family: 'Hind Bold', serif;
+    font-size: 3.2rem;
+  }
+  .info {
+    margin: 6px 0;
+  }
+  .go-back {
+    margin: 16px 0 0 0;
+    width: fit-content;
+    position: relative;
+    color: #fc2;
+    a {
+      color: currentColor;
+      text-decoration: none;
+      display: block;
+      box-sizing: border-box;
+      &:hover {
+        border-bottom: 2px solid currentColor;
+      }
+    }
+  }
+  .pic {
+    img {
+      position: absolute;
+      height: calc(100% + 32px);
+      right: 0;
+      top: 0;
+      margin: -16px -16px 0 0;
+    }
+  }
+}

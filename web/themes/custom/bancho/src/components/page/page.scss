@@ -1,4 +1,21 @@
+// Admin only.
+html.gin--dark-mode {
+  body {
+    .dialog-off-canvas-main-canvas {
+      min-height: calc(100% - 113px);
+    }
+  }
+  footer.page__footer {
+    .block--copyright {
+      .contextual {
+        display: none;
+      }
+    }
+  }
+}
+
 .page__content > .container {
   background: #2A2A2D;
   padding: 16px;
+  box-shadow: 0 0 32px rgba(30, 30, 30, 2);
 }

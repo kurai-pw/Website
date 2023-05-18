@@ -1,0 +1,15 @@
+name: 'Bancho default content'
+type: module
+hidden: TRUE
+description: 'Default content for bancho website.'
+core_version_requirement: ^10
+package: Custom
+
+default_content:
+  node:
+    # Home page.
+    - d5bf990a-ff7c-42fa-ac5e-202e83d321c4
+    # 404.
+    - c3477bf9-b2f7-48d5-a0b1-f3055d35bb80
+    # 403.
+    - f2ca1a3d-f98a-430c-bff5-675c357feeb2
