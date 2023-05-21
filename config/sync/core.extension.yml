@@ -7,6 +7,7 @@ module:
   bancho_api: 0
   bancho_content: 0
   bancho_default_content: 0
+  bancho_leaderboard: 0
   bancho_users: 0
   better_exposed_filters: 0
   big_pipe: 0

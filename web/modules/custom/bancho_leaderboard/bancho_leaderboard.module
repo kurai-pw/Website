@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ *
+ * Contains hooks for bancho_content module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function bancho_leaderboard_theme() {
+  return [
+    'bancho_leaderboard__leaderboard' => [
+      'variables' => [],
+    ],
+  ];
+}
+

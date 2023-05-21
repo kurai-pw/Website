@@ -1,0 +1,5 @@
+name: Bancho Leaderboard
+description: Provides a leaderboard for bancho project.
+package: Custom
+type: module
+core_version_requirement: ^10

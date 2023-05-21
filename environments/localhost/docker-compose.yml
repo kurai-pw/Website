@@ -30,14 +30,11 @@ services:
       DRUSH_ALLOW_XDEBUG: 1
       PHP_XDEBUG_REMOTE_CONNECT_BACK: 0
       PHP_XDEBUG_START_WITH_REQUEST: "yes"
-#      PHP_XDEBUG_REMOTE_HOST: bancho.localhost
       PHP_XDEBUG_LOG_LEVEL: 0
-#      PHP_IDE_CONFIG: serverName=bancho
-#      PHP_XDEBUG_IDEKEY: "bancho"
+      PHP_IDE_CONFIG: serverName=bancho
+      PHP_XDEBUG_IDEKEY: "bancho"
       PHP_XDEBUG_DEFAULT_ENABLE: 1
-      PHP_IDE_CONFIG: serverName=PHPSTORM
-      PHP_XDEBUG_IDEKEY: "PHPSTORM"
-      PHP_XDEBUG_REMOTE_HOST: 10.0.75.1
+      PHP_XDEBUG_REMOTE_HOST: host.docker.internal
       PHP_FPM_CLEAR_ENV: 'false'
     volumes:
     - ./../../:/var/www/html:cached

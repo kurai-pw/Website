@@ -1,0 +1,7 @@
+bancho_leaderboard.leaderboard:
+  path: '/leaderboard'
+  defaults:
+    _title: 'Leaderboard'
+    _controller: '\Drupal\bancho_leaderboard\Controller\BanchoLeaderboardController::build'
+  requirements:
+    _permission: 'access content'

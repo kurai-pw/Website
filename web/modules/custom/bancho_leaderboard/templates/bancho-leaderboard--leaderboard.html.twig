@@ -1,0 +1,70 @@
+<div class="leaderboard--page">
+  <div class="leaderboard-header">
+    <div class="leaderboard-banner main-banner">
+      <div class="main-selector">
+        <a class="mode-select active">
+          <i class="mode-icon mode-osu"></i>
+          <span class="modetext"> osu!</span>
+        </a>
+        <a class="mode-select">
+          <i class="mode-icon mode-taiko"></i>
+          <span class="modetext"> osu!taiko</span>
+        </a>
+        <a class="mode-select">
+          <i class="mode-icon mode-catch"></i>
+          <span class="modetext"> osu!catch</span>
+        </a>
+        <a class="mode-select disabled">
+          <i class="mode-icon mode-mania"></i>
+          <span class="modetext"> osu!mania</span>
+        </a>
+      </div>
+
+      <div class="banner-text">
+        Leaderboard
+      </div>
+      <div class="selector">
+        <div class="left">
+          <a class="simple-banner-switch">Performance Points</a>
+          <a class="simple-banner-switch active">Score</a>
+        </div>
+
+        <div class="right">
+          <a class="simple-banner-switch">Vanilla</a>
+          <a class="simple-banner-switch active">Relax</a>
+          <a class="simple-banner-switch">Autopilot</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="leaderboard-table">
+    <table class="leaderboard-table table-responsive">
+      <thead>
+        <tr>
+          <th class="ranking-page-table__heading"></th>
+          <th class="ranking-page-table__heading ranking-page-table__heading--main"></th>
+          <th class="ranking-page-table__heading table__heading--selected"> PP </th>
+          <th class="ranking-page-table__heading"> Accuracy </th>
+          <th class="ranking-page-table__heading"> Playcount </th>
+        </tr>
+      </thead>
+      <tbody id="leaderboard-tbody">
+        <tr id="leaderboard-template" class="leaderboard-column">
+          <td class="ranking-page-table__column leaderboard-column-player-rank">#0 </td>
+          <td class="ranking-page-table__column leaderboard-column-player-name">
+            <div class="player-flag"></div>
+            <a class="player-name" href="/user/1">player</a>
+          </td>
+          <td class="ranking-page-table__column leaderboard-column-pp">pp </td>
+          <td class="ranking-page-table__column leaderboard-column-accuracy ranking-page-table__column--dimmed">accuracy </td>
+          <td class="ranking-page-table__column leaderboard-column-playcount ranking-page-table__column--dimmed">playcount </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="leaderboard--actions">
+
+  </div>
+</div>

@@ -1,0 +1,72 @@
+.leaderboard--page {
+  font-family: "Rubik", serif;
+  .leaderboard-header {
+
+  }
+  div.leaderboard-table {
+    > table.leaderboard-table {
+      border-collapse:separate;
+      border-spacing: 0 8px;
+    }
+    thead {
+      .ranking-page-table__heading--main {
+        width: 100%;
+      }
+      th {
+        opacity: 0.7;
+        font-weight: 500;
+        font-family: 'Torus Regular', serif;
+      }
+    }
+    tbody {
+      #leaderboard-template.leaderboard-column {
+        display: none;
+      }
+      .leaderboard-column {
+        color: white;
+        height: 38px;
+        font-size: .92rem;
+        td {
+          background-color: hsl(340, 15%, 25%);
+        }
+        td.leaderboard-column-player-rank {
+          background: #4F3B41 !important;
+          padding-right: 2px;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          font-family: 'Hind Bold', serif;
+        }
+        td.leaderboard-column-player-name {
+          .player-flag {
+            display: inline-block;
+            background-size: 100%;
+            margin-right: 4px;
+            width: 30px;
+            height: 20px;
+            margin-bottom: -6px;
+            transition: 0.2s filter ease-out, 0.2s box-shadow ease-out;
+            border-radius: 2px;
+          }
+          .player-name {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+          }
+        }
+        td.leaderboard-column-playcount {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+        &:hover {
+          td {
+            background-color: hsl(340, 20%, 30%);
+          }
+        }
+      }
+    }
+    th, td {
+
+      padding: 5px 12px;
+    }
+  }
+}

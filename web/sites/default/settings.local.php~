@@ -1,0 +1,8 @@
+<?php
+
+$settings['reverse_proxy'] = TRUE;
+$settings['reverse_proxy_addresses'] = ['kurai.localhost'];
+$settings['reverse_proxy_host_header'] = 'X_FORWARDED_HOST';
+
+$base_url = 'https://new.kurai.localhost';
+
