@@ -1,0 +1,20 @@
+uuid: 38fcde96-ef5a-4039-a4ac-1afd23262533
+langcode: en
+status: true
+dependencies:
+  module:
+    - bancho_users
+  theme:
+    - bancho
+id: user_menu
+theme: bancho
+region: navbar_right
+weight: -3
+provider: null
+plugin: bancho_header_user_menu
+settings:
+  id: bancho_header_user_menu
+  label: 'User Menu'
+  label_display: '0'
+  provider: bancho_users
+visibility: {  }

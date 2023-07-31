@@ -11,7 +11,7 @@
  */
 function bancho_content_theme() {
   return [
-    'bancho__content_development_alert' => [
+    'bancho_content__development_alert' => [
       'variables' => [],
     ],
   ];

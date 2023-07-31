@@ -3,6 +3,10 @@
 }
 
 nav.navbar {
+  > .container {
+    max-width: 1100px;
+  }
+
   background-color: var(--color-purple) !important;
   font-family: 'Torus Regular', serif;
   ul.nav {
