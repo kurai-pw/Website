@@ -1,0 +1,46 @@
+{% if not user_id %}
+  <div class="login-button">
+    <span>
+      Sign In
+    </span>
+  </div>
+{% else %}
+  <div class="user--menu">
+    <div class="user-avatar">
+      <img src="{{ avatar }}" alt="kurai.pw" data--action="userToggleMenu">
+    </div>
+
+    <div class="menu--pop-up">
+      <div
+        class="top-side"
+        style="
+          background-image: url({{ banner }});
+        "
+      >
+        <div class="player-name">
+          {{ username }}
+        </div>
+      </div>
+
+      <div class="bottom-side">
+        <ul>
+          <li>
+            <a href="/user/{{ user_id }}">My Profile</a>
+          </li>
+
+          <li>
+            <a href="/friends">Friends</a>
+          </li>
+
+          <li>
+            <a href="/user/{{ user_id }}/edit">Settings</a>
+          </li>
+
+          <li>
+            <a href="/user/logout">Sign Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endif %}

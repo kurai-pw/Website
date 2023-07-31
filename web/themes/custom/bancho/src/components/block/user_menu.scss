@@ -1,0 +1,61 @@
+.user--menu {
+  position: relative;
+
+  .user-avatar {
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .menu--pop-up {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1F1F1F;
+    z-index: 1000;
+    box-shadow: 0 0 6px rgba(30, 30, 30, 0.5);
+    border-radius: 8px;
+    width: 150px;
+
+    .top-side {
+      height: 110px;
+      background-size: auto 100%;
+      background-position-x: center;
+      border-radius: 8px 8px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .player-name {
+
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 12px 8px;
+      margin: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          padding: 3px 0 3px 16px;
+          position: relative;
+          color: white;
+          white-space: nowrap;
+          border-radius: 6px;
+
+          &:hover {
+            background: hsl(255, 0, 15);
+          }
+        }
+      }
+    }
+  }
+}

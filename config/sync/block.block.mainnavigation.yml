@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation
 theme: bancho
 region: navbar_left
-weight: 0
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:

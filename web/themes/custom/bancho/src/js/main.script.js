@@ -11,3 +11,5 @@ import { Toast, Tooltip } from './_bootstrap';
 		.querySelectorAll('.toast')
 		.forEach((toastElement) => new Toast(toastElement));
 })();
+
+import '../components/block/toggle_user_menu';

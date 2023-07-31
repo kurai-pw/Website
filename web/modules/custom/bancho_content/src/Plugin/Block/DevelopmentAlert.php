@@ -21,7 +21,7 @@ class DevelopmentAlert extends BlockBase {
    */
   public function build() {
     return [
-      '#theme' => 'bancho__content_development_alert',
+      '#theme' => 'bancho_content__development_alert',
     ];
   }
 

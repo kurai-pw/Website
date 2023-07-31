@@ -1,0 +1,20 @@
+uuid: 5b694416-8106-4567-9d8b-ac2dad1db48f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bancho
+id: messages
+theme: bancho
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }
