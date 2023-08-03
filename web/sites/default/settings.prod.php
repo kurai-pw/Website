@@ -15,11 +15,7 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 
 $settings['trusted_host_patterns'] = [
   // Live host patterns.
-  '^usasprayme\.com$',
-  '^www\.usasprayme\.com$',
-  // Dev host patterns.
-  '^dev\.usasprayme\.com$',
-  '^www\.dev\.usasprayme\.com$',
+  '^new.kurai\.pw$',
   // Local host patterns.
   '^usasprayme\.ddev\.site$'
 ];
