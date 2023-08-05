@@ -19,6 +19,7 @@ services:
     image: wodby/drupal-php:$PHP_TAG
     restart: unless-stopped
     container_name: "${PROJECT_NAME}_php"
+    user: "root"
     environment:
       SSMTP_MAILHUB: mailhog:1025
       PHP_SENDMAIL_PATH: '"/usr/bin/dos2unix -u | /usr/sbin/ssmtp -t -f"'
