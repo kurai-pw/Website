@@ -17,7 +17,7 @@ $settings['trusted_host_patterns'] = [
   // Live host patterns.
   '^new.kurai\.pw$',
   // Local host patterns.
-  '^usasprayme\.ddev\.site$'
+  '^kurai\.ddev\.site$'
 ];
 
 $base_url = 'https://new.kurai.pw/';
