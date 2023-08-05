@@ -57,6 +57,8 @@ services:
       NGINX_BACKEND_HOST: php
       NGINX_SERVER_ROOT: /var/www/html/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
+    ports:
+      - "${PROJECT_PORT}:80"
     volumes:
       - ../../:/var/www/html:cached
     labels:
